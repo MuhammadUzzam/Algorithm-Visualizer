@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bubble_sort.cpp \
     graph_window.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -16,12 +17,14 @@ SOURCES += \
     sorting_window.cpp
 
 HEADERS += \
+    bubble_sort.h \
     graph_window.h \
     mainwindow.h \
     searching_window.h \
     sorting_window.h
 
 FORMS += \
+    bubble_sort.ui \
     graph_window.ui \
     mainwindow.ui \
     searching_window.ui \

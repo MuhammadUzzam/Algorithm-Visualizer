@@ -14,19 +14,128 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnBack">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>500</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>back</string>
-    </property>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="btnBubbleSort">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0077b6,
+        stop:1 #48cae4
+    );
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #48cae4,
+        stop:1 #90e0ef
+    );
+}
+
+QPushButton:pressed {
+    background-color: #023e8a;
+}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Bubble Sort</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnInsertionSort">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0077b6,
+        stop:1 #48cae4
+    );
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #48cae4,
+        stop:1 #90e0ef
+    );
+}
+
+QPushButton:pressed {
+    background-color: #023e8a;
+}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Insertion Sort</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnBack">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
+    font-size: 12px;
+    color: white;
+	background: qlineargradient(
+    	spread:pad,
+    	x1:0, y1:0, x2:1, y2:1,
+    	stop:0 #000000,
+    	stop:1 #1a1a1a
+	);
+
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #48cae4,
+        stop:1 #90e0ef
+    );
+}
+
+QPushButton:pressed {
+    background-color: #023e8a;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>back</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

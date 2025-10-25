@@ -3,6 +3,8 @@
 #include "sorting_window.h"
 #include "searching_window.h"
 #include "graph_window.h"
+#include "bubble_sort.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)

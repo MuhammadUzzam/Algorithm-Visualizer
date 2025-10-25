@@ -33,6 +33,5 @@ private:
     searching_window* search_window;
     sorting_window* sort_window;
     graph_window* grph_window;
-
 };
 #endif // MAINWINDOW_H

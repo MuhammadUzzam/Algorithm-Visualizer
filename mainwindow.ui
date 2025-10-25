@@ -14,17 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>10</y>
-      <width>431</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
     font-family: &quot;Times New Roman&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;
     font-size: 28px;
     font-weight: bold;
@@ -40,22 +34,31 @@
     padding: 5px;
 }
 </string>
-    </property>
-    <property name="text">
-     <string>Algorithm Visualizer</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnSorting">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>400</y>
-      <width>261</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
+      </property>
+      <property name="text">
+       <string>Algorithm Visualizer</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnGraph">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
     font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
     font-size: 18px;
     color: white;
@@ -84,22 +87,29 @@ QPushButton:pressed {
     background-color: #023e8a;
 }
 </string>
-    </property>
-    <property name="text">
-     <string>Sorting Algorithms</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnSearching">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>400</y>
-      <width>261</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
+        </property>
+        <property name="text">
+         <string>Graph Algorithms</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSorting">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
     font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
     font-size: 18px;
     color: white;
@@ -128,22 +138,29 @@ QPushButton:pressed {
     background-color: #023e8a;
 }
 </string>
-    </property>
-    <property name="text">
-     <string>Searching Algorithms</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnGraph">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>483</y>
-      <width>221</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
+        </property>
+        <property name="text">
+         <string>Sorting Algorithms</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSearching">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
     font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
     font-size: 18px;
     color: white;
@@ -172,11 +189,15 @@ QPushButton:pressed {
     background-color: #023e8a;
 }
 </string>
-    </property>
-    <property name="text">
-     <string>Graph Algorithms</string>
-    </property>
-   </widget>
+        </property>
+        <property name="text">
+         <string>Searching Algorithms</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
