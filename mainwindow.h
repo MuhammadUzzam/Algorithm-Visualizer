@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+class searching_window;
+class graph_window;
+class sorting_window;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +20,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
+    void on_btnSearching_clicked();
+
+    void on_btnSorting_clicked();
+
+    void on_btnGraph_clicked();
+
 private:
     Ui::MainWindow *ui;
+    searching_window* search_window;
+    sorting_window* sort_window;
+    graph_window* grph_window;
+
 };
 #endif // MAINWINDOW_H

@@ -9,14 +9,23 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    graph_window.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    searching_window.cpp \
+    sorting_window.cpp
 
 HEADERS += \
-    mainwindow.h
+    graph_window.h \
+    mainwindow.h \
+    searching_window.h \
+    sorting_window.h
 
 FORMS += \
-    mainwindow.ui
+    graph_window.ui \
+    mainwindow.ui \
+    searching_window.ui \
+    sorting_window.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

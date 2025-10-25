@@ -6,20 +6,184 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>766</width>
+    <height>606</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>10</y>
+      <width>431</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    font-family: &quot;Times New Roman&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+	color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, x2:1, y2:0, 
+        stop:0 #0077b6, stop:1 #48cae4
+    );
+    qproperty-alignment: AlignCenter;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 5px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Algorithm Visualizer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSorting">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>400</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0077b6,
+        stop:1 #48cae4
+    );
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #48cae4,
+        stop:1 #90e0ef
+    );
+}
+
+QPushButton:pressed {
+    background-color: #023e8a;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Sorting Algorithms</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSearching">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>400</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0077b6,
+        stop:1 #48cae4
+    );
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #48cae4,
+        stop:1 #90e0ef
+    );
+}
+
+QPushButton:pressed {
+    background-color: #023e8a;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Searching Algorithms</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGraph">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>483</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font-family: &quot;Segoe UI Semibold&quot;, &quot;Times New Roman&quot;, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0077b6,
+        stop:1 #48cae4
+    );
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        spread:pad,
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #48cae4,
+        stop:1 #90e0ef
+    );
+}
+
+QPushButton:pressed {
+    background-color: #023e8a;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Graph Algorithms</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>766</width>
      <height>21</height>
     </rect>
    </property>
