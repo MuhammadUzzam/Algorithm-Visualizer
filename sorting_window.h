@@ -2,6 +2,8 @@
 #define SORTING_WINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsScene>
+#include <QTimer>
 
 class MainWindow;
 class bubble_sort;
