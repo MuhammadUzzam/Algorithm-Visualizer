@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>linear_search</class>
+ <widget class="QMainWindow" name="linear_search">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #1e1b4b,      /* Indigo */
+        stop:0.5 #581c87,    /* Purple */
+        stop:1 #831843       /* Pink */
+    );
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="lblTitle">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    font-family: &quot;Rockwell&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+	color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, x2:1, y2:0, 
+        stop:0 #0077b6, stop:1 #48cae4
+    );
+    qproperty-alignment: AlignCenter;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 5px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Linear Search Algorithm Visualization</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnResetlin">
+        <property name="styleSheet">
+         <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+        </property>
+        <property name="text">
+         <string>Reset</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRandomizelin">
+        <property name="styleSheet">
+         <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+        </property>
+        <property name="text">
+         <string>Randomize</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnPauselin">
+        <property name="styleSheet">
+         <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+        </property>
+        <property name="text">
+         <string>Pause</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnsearchlin">
+        <property name="styleSheet">
+         <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineSearchEdit">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    font-family: &quot;Times New Roman&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+	color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, x2:1, y2:0, 
+        stop:0 #ffffff
+    );
+    qproperty-alignment: AlignCenter;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 5px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Enter the number you want to search :</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QSlider" name="sliderSpeed">
+        <property name="minimumSize">
+         <size>
+          <width>211</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>100</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>500</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TickPosition::TicksBelow</enum>
+        </property>
+        <property name="tickInterval">
+         <number>100</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblOperation">
+        <property name="styleSheet">
+         <string notr="true">  QLabel {
+        font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: qlineargradient(
+            spread:pad,
+            x1:0, y1:0, x2:1, y2:0,
+            stop:0 #00ffff, stop:1 #00dddd
+        );
+        qproperty-alignment: AlignCenter;
+        letter-spacing: 1px;
+        background: transparent;
+        padding: 5px;
+    }</string>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBacklin">
+        <property name="styleSheet">
+         <string notr="true"> QPushButton {
+        background: qlineargradient(stop:0 #ffffff, stop:1 #f3f4f6);
+        color: #1a0033;
+        font-size: 16px;
+        font-weight: 700;
+        border: 2px solid #e5e7eb;
+        border-radius: 20px;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #e5e7eb, stop:1 #d1d5db);
+        border: 2px solid #9ca3af;
+        color: #0f172a;
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #9ca3af, stop:1 #6b7280);
+        border: 2px solid #6b7280;
+        color: #0f172a;
+        padding: 11px 20px 9px 20px;
+    }</string>
+        </property>
+        <property name="text">
+         <string>back</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

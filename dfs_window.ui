@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dfs_window</class>
+ <widget class="QMainWindow" name="dfs_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>747</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    font-family: &quot;Rockwell&quot;, &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+	color: qlineargradient(
+        spread:pad, 
+        x1:0, y1:0, x2:1, y2:0, 
+        stop:0 #0077b6, stop:1 #48cae4
+    );
+    qproperty-alignment: AlignCenter;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 5px;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>Depth First Search Visualization</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="10,2">
+        <item>
+         <widget class="QGraphicsView" name="graphicsView"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QSpinBox" name="spinNodeCount">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox {
+    background-color: qlineargradient(stop:0 #10b981, stop:1 #059669);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Hover */
+QSpinBox:hover {
+    background-color: #059669;
+}
+
+/* Pressed */
+QSpinBox:pressed {
+    background-color: #047857;
+}</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>50</number>
+            </property>
+            <property name="value">
+             <number>6</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSlider" name="speedSlider">
+            <property name="minimum">
+             <number>100</number>
+            </property>
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="value">
+             <number>500</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnRunDFS">
+            <property name="styleSheet">
+             <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+            </property>
+            <property name="text">
+             <string>Run DFS</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnAddEdge">
+            <property name="styleSheet">
+             <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+            </property>
+            <property name="text">
+             <string>Add Edge</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnAddNode">
+            <property name="styleSheet">
+             <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+            </property>
+            <property name="text">
+             <string>Add Node</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnClearGraph">
+            <property name="styleSheet">
+             <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+            </property>
+            <property name="text">
+             <string>Clear Graph</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnRemoveNode">
+            <property name="styleSheet">
+             <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+            </property>
+            <property name="text">
+             <string>Remove Node</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnRandomGraph">
+            <property name="styleSheet">
+             <string notr="true">    QPushButton {
+        background: qlineargradient(stop:0 #10b981, stop:1 #059669);
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 24px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #059669, stop:1 #047857);
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #047857, stop:1 #065f46);
+        padding: 14px 24px 10px 24px;
+    }</string>
+            </property>
+            <property name="text">
+             <string>Random Graph</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBack">
+            <property name="styleSheet">
+             <string notr="true"> QPushButton {
+        background: qlineargradient(stop:0 #ffffff, stop:1 #f3f4f6);
+        color: #1a0033;
+        font-size: 16px;
+        font-weight: 700;
+        border: 2px solid #e5e7eb;
+        border-radius: 20px;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+    }
+    QPushButton:hover {
+        background: qlineargradient(stop:0 #e5e7eb, stop:1 #d1d5db);
+        border: 2px solid #9ca3af;
+        color: #0f172a;
+    }
+    QPushButton:pressed {
+        background: qlineargradient(stop:0 #9ca3af, stop:1 #6b7280);
+        border: 2px solid #6b7280;
+        color: #0f172a;
+        padding: 11px 20px 9px 20px;
+    }</string>
+            </property>
+            <property name="text">
+             <string>back</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>747</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
